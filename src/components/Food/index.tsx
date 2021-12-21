@@ -88,37 +88,3 @@ export default function Food({ food, handleDelete, handleEditFood}: FoodProps) {
     </Container>
   );
 }
-
-// class Food extends Component {
-//   constructor(props) {
-//     super(props);
-
-//     const { available } = this.props.food;
-//     this.state = {
-//       isAvailable: available
-//     };
-//   }
-
-//   toggleAvailable = async () => {
-//     const { food } = this.props;
-//     const { isAvailable } = this.state;
-
-//     await api.put(`/foods/${food.id}`, {
-//       ...food,
-//       available: !isAvailable,
-//     });
-
-//     this.setState({ isAvailable: !isAvailable });
-//   }
-
-//   setEditingFood = () => {
-//     const { food, handleEditFood } = this.props;
-
-//     handleEditFood(food);
-//   }
-
-//   render() {
-//     const { isAvailable } = this.state;
-//     const { food, handleDelete } = this.props;
-//   }
-// };
