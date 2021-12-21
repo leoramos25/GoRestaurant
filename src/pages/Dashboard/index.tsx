@@ -32,10 +32,6 @@ export default function Dashboard() {
     getFood()
   }, []);
 
-  function toggleModal() {
-    setModalOpen(!modalOpen);
-  }
-
   async function handleAddFood(food: FoodInput) {
     try {
       const response = await api.post('/foods', {
@@ -64,6 +60,10 @@ export default function Dashboard() {
     await api.delete(`/foods/${id}`);
     const filteredFoods = foods.filter(food => food.id !== id);
     setFoods(filteredFoods);
+  }
+
+  function toggleModal() {
+    setModalOpen(!modalOpen);
   }
 
   function toggleEditModal() {

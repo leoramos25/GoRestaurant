@@ -25,7 +25,7 @@ export default function Food({ food, handleDelete, handleEditFood }: FoodProps) 
   const [isAvailable, setIsAvailable] = useState(available);
 
   async function toggleAvailable() {
-    await api.put(`food/${food.id}`, {
+    await api.put(`foods/${food.id}`, {
       ...food,
       available: !isAvailable,
     });
