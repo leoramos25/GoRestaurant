@@ -16,7 +16,7 @@ interface IFood {
 
 type FormEditFood = {
   name: string;
-  price: string;
+  price: number;
   image: string;
   description: string;
 }
@@ -25,7 +25,7 @@ type ModalEditProps = {
   isOpen: boolean;
   editingFood: IFood;
   setIsOpen(): void;
-  handleUpdateFood({ name, price, image, description }: FormEditFood): void;
+  handleUpdateFood({ name, price, image, description }: FormEditFood): Promise<void>;
 }
 
 export default function ModalEditFood({ isOpen, setIsOpen, editingFood, handleUpdateFood }: ModalEditProps) {

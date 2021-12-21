@@ -14,7 +14,7 @@ interface IFood {
 }
 
 type FoodProps = {
-  id: number;
+  key: number;
   food: IFood;
   handleDelete(id: number): void;
   handleEditFood(food: IFood): void;

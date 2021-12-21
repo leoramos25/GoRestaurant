@@ -7,7 +7,7 @@ import Input from '../Input';
 
 type FormAddFood = {
   name: string;
-  price: string;
+  price: number;
   image: string;
   description: string;
 }
@@ -15,7 +15,7 @@ type FormAddFood = {
 type ModalAddFoodProps = {
   isOpen: boolean;
   setIsOpen(): void;
-  handleAddFood({ name, price, image, description }: FormAddFood): void;
+  handleAddFood({ name, price, image, description }: FormAddFood): Promise<void>;
 }
 
 export default function ModalAddFood({ isOpen, setIsOpen, handleAddFood }: ModalAddFoodProps) {
